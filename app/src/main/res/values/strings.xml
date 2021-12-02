@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">lab2_Suprun</string>
+    <string name="type_task">Тип завдання:</string>
+    <string name="text_for_button_ok">OK</string>
+    <string name="level_difficulty">Рівень складності:</string>
+    <string name="level_easy">Легкий</string>
+    <string name="level_average">Середній</string>
+    <string name="level_high">Високий</string>
+    <string name="type_theoretical">Теоретичне</string>
+    <string name="type_practice">Практичне</string>
+    <string name="result">Результат</string>
+    <string name="enter_question">Введіть завдання:</string>
+</resources>

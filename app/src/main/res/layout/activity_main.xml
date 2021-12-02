@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/purple_200">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container_view_input"
+        android:name="com.example.lab2_suprun.FragmentContentInput"
+        android:layout_width="420dp"
+        android:layout_height="480dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_container_view_output"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout = "@layout/fragment_content"/>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container_view_output"
+        android:name="com.example.lab2_suprun.FragmentContentOutput"
+        android:layout_width="420dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_container_view_input"
+        tools:layout = "@layout/fragment_result"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
