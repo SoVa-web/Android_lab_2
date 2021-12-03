@@ -3,9 +3,10 @@ package com.example.lab2_suprun;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
+import android.content.Intent;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity implements FragmentContentInput.OnSelectedButtonListener{
+public class MainActivity extends AppCompatActivity implements FragmentContentInput.OnSelectedButtonListener, FragmentContentInput.OnSelectedButtonListenerOpen{
 
 
 
@@ -27,6 +28,13 @@ public class MainActivity extends AppCompatActivity implements FragmentContentIn
         if (fragment_result != null)
             fragment_result.setTask(result_task);
 
+    }
+
+    @Override
+    public void onButtonSelectedOpen(String path) {
+        Intent intent = new Intent(this, ActivityReadStorage.class);
+        intent.putExtra("path", path);
+        startActivity(intent);
     }
 }
 

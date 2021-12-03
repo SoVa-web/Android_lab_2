@@ -30,9 +30,15 @@ public class FragmentContentInput extends Fragment{
     private EditText task;
     private String val_type;
     private  String val_dif;
+    public String file_name = (Environment.getExternalStoragePublicDirectory(
+            Environment.DIRECTORY_DOCUMENTS)).toString() + "/saved_task.txt";
 
     public interface OnSelectedButtonListener {
         void onButtonSelected(String res);
+    }
+
+    public interface OnSelectedButtonListenerOpen {
+        void onButtonSelectedOpen(String path);
     }
 
     @SuppressLint("NonConstantResourceId")
@@ -46,8 +52,10 @@ public class FragmentContentInput extends Fragment{
         RadioGroup type_task = rootView.findViewById(R.id.type);
         task = rootView.findViewById(R.id.editTextTextMultiLine2);
         Button button_ok = rootView.findViewById(R.id.button);
+        Button open_storage = rootView.findViewById(R.id.open_saved);
 
         button_ok.setOnClickListener(this::onClick);
+        open_storage.setOnClickListener(this::onClickOpen);
 
         type_task.setOnCheckedChangeListener((arg0, id) -> {
             switch(id) {
@@ -83,8 +91,7 @@ public class FragmentContentInput extends Fragment{
 
     public void saveTask(String res){
 
-        try(FileWriter writer = new FileWriter((Environment.getExternalStoragePublicDirectory(
-                Environment.DIRECTORY_DOCUMENTS)).toString() + "/saved_task.txt", true))
+        try(FileWriter writer = new FileWriter(file_name, true))
         {
             writer.write(res);
             writer.append('\n');
@@ -118,6 +125,12 @@ public class FragmentContentInput extends Fragment{
             listener.onButtonSelected(result_output);
 
         }
+    }
+
+    public void onClickOpen(View view){
+        OnSelectedButtonListenerOpen listener = (OnSelectedButtonListenerOpen) getActivity();
+        assert listener != null;
+        listener.onButtonSelectedOpen(file_name);
     }
 
 }

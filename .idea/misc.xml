@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidLabs/lab2_Suprun/app/src/main/res/layout/activity_main.xml" value="0.1171875" />
+        <entry key="..\:/AndroidLabs/lab2_Suprun/app/src/main/res/layout/activity_read_storage.xml" value="0.1171875" />
         <entry key="..\:/AndroidLabs/lab2_Suprun/app/src/main/res/layout/fragment_content.xml" value="0.2" />
       </map>
     </option>
