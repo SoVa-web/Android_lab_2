@@ -41,13 +41,20 @@
         android:id="@+id/button"
         android:layout_width="125dp"
         android:layout_height="63dp"
-        android:layout_marginStart="142dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="142dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="1dp"
         android:text="@string/text_for_button_ok"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/difficulty" />
+
+    <Button
+        android:id="@+id/open_saved"
+        android:layout_width="125dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="50dp"
+        android:text="@string/text_for_button_open"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/type" />
 
     <RadioGroup

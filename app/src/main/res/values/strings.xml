@@ -2,6 +2,7 @@
     <string name="app_name">lab2_Suprun</string>
     <string name="type_task">Тип завдання:</string>
     <string name="text_for_button_ok">OK</string>
+    <string name="text_for_button_open">Відкрити</string>
     <string name="level_difficulty">Рівень складності:</string>
     <string name="level_easy">Легкий</string>
     <string name="level_average">Середній</string>
